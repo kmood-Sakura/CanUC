@@ -1,0 +1,68 @@
+# CanUC Project Configuration
+
+# Project Information
+project:
+  name: CanUC
+  version: 0.1.0
+  description: "Multi-component C project with integrated submodules"
+
+# Build Configuration
+build:
+  type: "native"  # Options: native, cross-compilation
+  compiler: "gcc"
+  standard: "c11"
+  optimization: "O2"
+  debug_symbols: true
+  warnings_as_errors: false
+
+# Submodule Configuration
+submodules:
+  service:
+    path: "src/service"
+    build_separately: false
+    dependencies: ["utils"]
+  
+  utils:
+    path: "src/utils"
+    build_separately: false
+    dependencies: []
+  
+  app:
+    path: "src/app"
+    build_separately: false
+    dependencies: ["utils", "service"]
+  
+  leb2:
+    path: "leb2"
+    build_separately: true
+    dependencies: []
+
+# Environment Configuration
+environment:
+  variables:
+    - "CANU_ENV=development"  # Options: development, testing, production
+    - "CANU_LOG_LEVEL=debug"  # Options: debug, info, warning, error
+
+# Testing Configuration
+testing:
+  framework: "cunit"
+  test_directory: "tests"
+  coverage: true
+
+# Deployment Configuration
+deployment:
+  target: "local"  # Options: local, server, embedded
+  artifacts:
+    - name: "canuc"
+      type: "executable"
+      path: "bin/canuc"
+    - name: "libcanuc"
+      type: "library"
+      path: "lib/libcanuc.so"
+
+# Documentation
+documentation:
+  tool: "doxygen"
+  output_directory: "docs"
+  generate_html: true
+  generate_pdf: false
