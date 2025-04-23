@@ -42,19 +42,12 @@ External submodule that provides [brief description of leb2 functionality]
 
 1. Clone the repository with submodules:
    ```
-   git clone --recursive https://github.com/yourusername/CanUC.git
+   git clone --recursive https://github.com/kmood-Sakura/CanUC.git
    ```
 
 2. If you've already cloned the repository without submodules:
    ```
-   git submodule init
-   git submodule update
-   ```
-
-3. Build the project:
-   ```
-   cd CanUC
-   make
+   git submodule update --init --recursive
    ```
 
 ## Configuration
