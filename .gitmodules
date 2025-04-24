@@ -1,12 +1,3 @@
-[submodule "src/utils"]
-	path = src/utils
-	url = https://github.com/kmood-Sakura/C-service-utils.git
-[submodule "src/service"]
-	path = src/service
-	url = https://github.com/kmood-Sakura/CanUC-service.git
-[submodule "src/app"]
-	path = src/app
-	url = https://github.com/kmood-Sakura/CanUC-app.git
 [submodule "leb2"]
 	path = leb2
 	url = https://github.com/kmood-Sakura/GO-CanUC.git
