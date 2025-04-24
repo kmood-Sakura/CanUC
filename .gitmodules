@@ -1,3 +1,6 @@
 [submodule "leb2"]
 	path = leb2
 	url = https://github.com/kmood-Sakura/GO-CanUC.git
+[submodule "src"]
+	path = src
+	url = https://github.com/kmood-Sakura/CanUC-src.git
