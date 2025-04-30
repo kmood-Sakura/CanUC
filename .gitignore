@@ -1,2 +1,6 @@
 .gitmodules
-build
+build/
+DB/
+.vscode/
+.o
+.exe
