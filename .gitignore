@@ -4,3 +4,4 @@ DB/
 .vscode/
 .o
 .exe
+.env
